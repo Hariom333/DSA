@@ -18,13 +18,14 @@ for($i=0; $i<=$n-1; $i++){
 
 
 }
-// return $new_arr[$k];
+
     echo 'this is '.$k.'nd highest element '. $arr[$k-1];
 
 }
 
 
 function kmin($arr,$n,$k){
+//arrange ascending;
 
 for($i=0;$i<=$n-1;$i++){
   
@@ -40,7 +41,6 @@ for($i=0;$i<=$n-1;$i++){
 
    }
 
-  /* echo $arr[$i] . ' ' ;*/
 
 }
 
@@ -68,5 +68,9 @@ $k =2;
  kmax($arr,$n,$k);
 
  kmin($arr,$n,$k);
+
+
+//time complexity O(n2); because two loop we need to perform it;
+
 
 ?>
