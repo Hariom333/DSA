@@ -4,6 +4,7 @@ function reverse(&$arr,$start,$end){
 // taking as reference  so taht array can modifi
 	while($start<$end){
        
+              
        $temp = $arr[$start];
        $arr[$start] = $arr[$end];
        $arr[$end] = $temp;
