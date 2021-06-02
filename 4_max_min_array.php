@@ -1,4 +1,5 @@
 <?php
+//input[1,3,2] =  3 max
 
 function maximun($arr,$n){
  $max = $arr[0];

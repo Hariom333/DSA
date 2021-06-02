@@ -1,5 +1,7 @@
 <?php
 
+// input = [1,2,3] = [3,2,1];
+
 function reverse(&$arr,$start,$end){
 // taking as reference  so taht array can modifi
 	while($start<$end){

@@ -3,6 +3,8 @@
 // JavaScript code for program
 // to cyclically rotate
 // an array by one
+// input [1,2,3,4]  = [4,1,2,3]
+
 function rotate(arr, n)
 {
 var x = arr[n-1], i;
