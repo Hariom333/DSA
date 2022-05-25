@@ -1,0 +1,15 @@
+
+var mostWordsFound = function(sentences) {
+    
+    var len = sentences.length;
+newArray = [];
+for (i = 0; i < len; i++) {
+  var a = sentences[i].split(" ").length;
+  newArray.push(a);
+}
+var b = Math.max(...newArray);
+//console.log(b);
+return b;
+    
+    
+};
