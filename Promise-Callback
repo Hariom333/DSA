@@ -1,0 +1,123 @@
+// // set array of Object
+const datas = [
+  { name: "hariom", exp: "4yr" },
+  { name: "deepak", exp: "3yr" },
+  { name: "rishab", exp: "5yr" },
+];
+
+// // problem start :-
+// function show() {
+//   // function take 1 second to show all data
+//   setTimeout(() => {
+//     let output = "";
+//     datas.forEach((data, index) => {
+//       // return `<li>${data.name}</li>`;
+//       output += `<li>${data.name}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 2000);
+// }
+
+// function sendData(raw) {
+//   // function take 2 second to to push data
+//   setTimeout(() => {
+//     datas.push(raw);
+//   }, 2000);
+// }
+
+// sendData({ name: "demo12", exp: "3yr" });
+// show();
+// //so value not show becuase show in 1 second and push in 2 second
+// //problem end :-
+// // ===========================================
+
+// // CALLBACK:-
+
+// function show() {
+//   setTimeout(() => {
+//     let output = "";
+//     datas.forEach((data, index) => {
+//       output += `<li>${data.name}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function sendData(raw, callback) {
+//   setTimeout(() => {
+//     datas.push(raw);
+//     callback();
+//   }, 1000);
+// }
+
+// sendData({ name: "testing", exp: "5yr" }, show);
+
+// // call back end here //
+
+// // Promise start
+
+// function show() {
+//   setTimeout(() => {
+//     let output = "";
+//     datas.forEach((data, index) => {
+//       output += `<li>${data.name}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function sendData(raw) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       datas.push(raw);
+//       let err = true;
+//       if (!err) {
+//         resolve();
+//       } else {
+//         reject("nothing is good");
+//       }
+//       // callback();
+//     }, 1000);
+//   });
+// }
+
+// sendData({ name: "test" })
+//   .then(show)
+//   .catch((err) => console.log(err));
+
+// promise end here
+
+//Async Await
+
+function show() {
+  // function take 1 second to show all data
+  setTimeout(() => {
+    let output = "";
+    datas.forEach((data, index) => {
+      // return `<li>${data.name}</li>`;
+      output += `<li>${data.name}</li>`;
+    });
+    document.body.innerHTML = output;
+  }, 2000);
+}
+
+function sendData(raw) {
+  // function take 2 second to to push data
+  setTimeout(() => {
+    datas.push(raw);
+  }, 1000);
+}
+
+// async function start() {
+//   await sendData({ name: "test", exp: "33y" });
+//   show();
+// }
+
+async function start() {
+  await sendData({ name: "test", exp: "33y" });
+  show();
+}
+
+start();
+
+//
